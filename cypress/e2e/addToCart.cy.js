@@ -3,6 +3,7 @@ import { LandingPage } from "../../page-object/landingpage.js"
 describe('empty spec', () => {
   
   const expectedResult=['Nexus 6','Macbook Pro', 'Asus Full HD']
+  const expectedText='Nexus 6'
   
   it('passes', () => {
     const home = new LandingPage
@@ -19,11 +20,9 @@ describe('empty spec', () => {
     Asus.clickAddToCart()
     const Cart=home.gotoCart()
         
-    Cart.checkAmountOfItems()
-    Cart.checkElementTexts()
-    
-  
-    // Cart.checkFirstElementName(expectedText)
+    Cart.checkAmountOfItems(3)
+    // Cart.checkElementTexts()
+    Cart.checkFirstElementName(expectedText)
  
   })
 })
