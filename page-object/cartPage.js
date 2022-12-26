@@ -38,14 +38,12 @@ export class CartPage{
     }
 
     checkTotalTextInModal(){
-      cy.get(this.totalTextLocator).should('have.text', 1750)
+      cy.get(this.totalTextInModalLocator).should('have.text', 1750)
     }
 
     placeOrder(){
       cy.get(this.placeOrderButtonLocator).click()
       return new OrderModal
     }
-
-
 
 }

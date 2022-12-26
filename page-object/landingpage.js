@@ -1,4 +1,5 @@
 import { CartPage } from "./cartPage"
+import { ContactModal } from "./contactModalPage"
 import { LaptopsPage } from "./laptopsPage"
 import { MonitorsPage } from "./monitorsPage"
 import { PhonesPage } from "./phonesPage"
@@ -9,6 +10,7 @@ export class LandingPage{
     SamsungLinkLocator=':nth-child(1) > .card > .card-block > .card-title > .hrefch'
     homepageUrl='#nava'
     cartButtonLocator='#cartur'
+    contactButtonLocator=':nth-child(2) > .nav-link'
 
    constructor(){
         cy.visit(this.landingPageUrl)
@@ -33,6 +35,11 @@ export class LandingPage{
     gotoCart(){
         cy.get(this.cartButtonLocator).click()
         return new CartPage
+    }
+
+    contact(){
+        cy.get(this.contactButtonLocator).click()
+        return new ContactModal
     }
 
 }
