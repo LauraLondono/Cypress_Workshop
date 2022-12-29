@@ -16,9 +16,9 @@ describe('empty spec', () => {
     Nexus6.clickAddToCart()
        
     const Cart=home.gotoCart()
-    Cart.checkTotalText()
+    Cart.checkTotalText(1750)
     const Order=Cart.placeOrder()
-    Cart.checkTotalTextInModal()
+    Cart.checkTotalTextInModal('Total: 1750')
     Order.fillOutFields(orderInfo)
     Order.purchase()
 

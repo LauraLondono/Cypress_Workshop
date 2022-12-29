@@ -1,6 +1,7 @@
 import { CartPage } from "./cartPage"
 import { ContactModal } from "./contactModalPage"
 import { LaptopsPage } from "./laptopsPage"
+import { LoginModal } from "./loginModalPage"
 import { MonitorsPage } from "./monitorsPage"
 import { PhonesPage } from "./phonesPage"
 
@@ -11,6 +12,7 @@ export class LandingPage{
     homepageUrl='#nava'
     cartButtonLocator='#cartur'
     contactButtonLocator=':nth-child(2) > .nav-link'
+    loginButtonLocator='#login2'
 
    constructor(){
         cy.visit(this.landingPageUrl)
@@ -40,6 +42,11 @@ export class LandingPage{
     contact(){
         cy.get(this.contactButtonLocator).click()
         return new ContactModal
+    }
+
+    logIn(){
+        cy.get(this.loginButtonLocator).click()
+        return new LoginModal
     }
 
 }

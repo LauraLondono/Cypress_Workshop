@@ -33,12 +33,12 @@ export class CartPage{
       cy.get(this.deleteFromCartButtonLocator).click()
     }
 
-    checkTotalText(){
-      cy.get(this.totalTextLocator).should('have.text', 1750)
+    checkTotalText(totalText){
+      cy.get(this.totalTextLocator).should('have.text', totalText)
     }
 
-    checkTotalTextInModal(){
-      cy.get(this.totalTextInModalLocator).should('have.text', 1750)
+    checkTotalTextInModal(totalText){
+      cy.get(this.totalTextInModalLocator).should('have.text', totalText)
     }
 
     placeOrder(){

@@ -1,7 +1,7 @@
 import { LandingPage } from "../../page-object/landingpage"
 
 describe('empty spec', () => {
-  it('passes', () => {
+  it('Items deleted from cart', () => {
 
     const home = new LandingPage
     const laptops = home.goToLaptopsPage()
@@ -12,10 +12,13 @@ describe('empty spec', () => {
     
     const Cart=home.gotoCart()
     Cart.checkAmountOfItems(3)
+    Cart.checkTotalText(3300)
     Cart.deleteFromCart()
-    Cart.checkAmountOfItems(2)
+    Cart.checkAmountOfItems(2)    
+    Cart.checkTotalText(2200)
     Cart.deleteFromCart()
     Cart.checkAmountOfItems(1)
+    Cart.checkTotalText(1100)
 
 
   })
