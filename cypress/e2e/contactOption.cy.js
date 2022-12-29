@@ -2,7 +2,7 @@ import { LandingPage } from "../../page-object/landingpage.js"
 
 describe('empty spec', () => {
 
-    const contactInfo=['hello123testmail.com', 'Maria Lopez', 'Testing the contact function']
+  const contactInfo=['hello123testmail.com', 'Maria Lopez', 'Testing the contact function']
 
   it('passes', () => {
     const home = new LandingPage
@@ -13,7 +13,6 @@ describe('empty spec', () => {
     // contactMessage.sendMessage()
 
     // contactMessage.checkEmail()
-
  
   })
 })
