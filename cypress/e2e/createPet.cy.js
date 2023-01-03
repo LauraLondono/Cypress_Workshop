@@ -4,7 +4,7 @@ describe('empty spec', () => {
 
   const petInfo=[12,'Daisy']
 
-  it('passes', () => {
+  it('Pet created and found', ( ) => {
 
     const store = new PSPage
     store.createPet(petInfo)

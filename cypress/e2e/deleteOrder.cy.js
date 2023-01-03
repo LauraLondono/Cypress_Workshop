@@ -5,8 +5,7 @@ describe('empty spec', () => {
   const orderInfo=[2, 15, 2]
   const petInfo=[15,'Chocko' ]
 
-
-  it('Order completed', () => {
+  it('Order deleted', () => {
     const store = new PSPage
     store.createPet(petInfo)
     store.findPet(petInfo,200)
