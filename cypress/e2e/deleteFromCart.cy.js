@@ -1,4 +1,4 @@
-import { LandingPage } from "../../page-object/landingpage"
+import { LandingPage } from "../../page-object/DemoblazeLandingpage"
 
 describe('empty spec', () => {
   it('Items deleted from cart', () => {

@@ -1,4 +1,4 @@
-import { LandingPage } from "../../page-object/landingpage.js"
+import { LandingPage } from "../../page-object/DemoblazeLandingpage.js"
 
 describe('empty spec', () => {
   
